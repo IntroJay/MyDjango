@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>人员列表</title>
+</head>
+<body>
+
+{% for person in persons %}
+    <li>{{ person.p_name }}已经{{ person.p_age }}岁了</li>
+{% endfor %}
+
+</body>
+</html>

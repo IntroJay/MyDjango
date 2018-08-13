@@ -1,0 +1,8 @@
+<h3>people列表</h3>
+
+<ul>
+    {% for people in peoples %}
+        <li>{{ people.p_name }}的注册时间是{{ people.p_register }}</li>
+    {% endfor %}
+
+</ul>

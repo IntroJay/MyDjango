@@ -1,0 +1,130 @@
+<h1>GAME LIST</h1>
+
+
+<ul>
+    {# 将游戏信息进行展示  #}
+    {% for game in games %}
+        <li>{{ game.g_name }}:{{ game.g_type }}</li>
+    {#   如果没有   #}
+    {% empty %}
+        <h2>暂无游戏可玩</h2>
+    {% endfor %}
+
+</ul>
+
+<hr>
+{#显示游戏类型为1的游戏名字#}
+<h2>{{ games.1.g_name }}</h2>
+
+<hr>
+{# 显示hobby的信息 #}
+<h3>
+    {{ hobby.name }}
+    {{ hobby.cost }}
+</h3>
+
+<hr>
+{# 检验是否登录 #}
+{% if is_login %}
+    <h2>欢迎主人回家</h2>
+{% else %}
+    <h3>游客登录</h3>
+{% endif %}
+
+<hr>
+    {#  程序真垃圾111 #}
+    <!-- 程序真垃圾222  -->
+<ul>
+{#对li列表进行编号#}
+    {% for game in games %}
+        {% if forloop.first %}
+        {# first 正向编号 从1开始#}
+            {# <li style="color:#7cff52">{{ forloop.counter }}{{ game.g_name }}</li>#}
+        {#  正向标号 从0开始  #}
+            {# <li style="color:#7cff52">{{ forloop.counter0 }}{{ game.g_name }}</li>#}
+        {#  反向标号  #}
+            <li style="color:#7cff52">{{ forloop.revcounter }}{{ game.g_name }}</li>
+
+        {% elif forloop.last %}
+{#  last  #}
+            <li style="color:red">{{ forloop.revcounter }}{{ game.g_name }}</li>
+
+        {% else %}
+            {#            <li style="color:gold">{{ forloop.counter }}{{ game.g_name }}</li>#}
+            {#            <li style="color:gold">{{ forloop.counter0 }}{{ game.g_name }}</li>#}
+            <li style="color:gold">{{ forloop.revcounter }}{{ game.g_name }}</li>
+        {% endif %}
+
+    {% endfor %}
+</ul>
+
+<!--
+<a href="/two/taocan/">8元5G流量包</a>
+-->
+
+{# 多行注释 #}
+{% comment %}
+ververververv
+3vv
+etrv
+etv
+tv
+tb
+tb
+3b
+4tb
+
+{% endcomment %}
+
+<hr>
+{# 乘除法 #}
+<h3>
+{#  将分数乘以2/1  即变为原来的两倍  #}
+    {% widthratio score 1 2 %}
+</h3>
+
+<hr>
+
+<ul>
+    {% for game in games %}
+{#        将编号为3的倍数的li置为绿色#}
+        {% if forloop.counter|divisibleby:3 %}
+            <li style="color:green">{{ game.g_name }}</li>
+        {% else %}
+            <li style="color:red">{{ game.g_name }}</li>
+        {% endif %}
+
+    {% endfor %}
+</ul>
+
+<hr>
+
+<ul>
+{#  #}
+    {% for game in games %}
+{#      将编号为2的li置为绿色  #}
+        {% ifequal forloop.counter 2 %}
+            <li style="color:green">{{ game.g_name }}</li>
+        {% else %}
+            <li style="color:red">{{ game.g_name }}</li>
+        {% endifequal %}
+    {% endfor %}
+
+</ul>
+
+<hr>
+
+<h2>
+{#  分数加10  #}
+    {{ score|add:10 }}
+</h2>
+
+<hr>
+{#将scores列表用"*"拼接成字符串在页面上显示#}
+<ul>
+    <h4>{{ scores|join:'*' }}</h4>
+</ul>
+
+<hr>
+{# js注入 #}
+<span>{{ code|safe }}</span>
