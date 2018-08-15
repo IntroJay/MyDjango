@@ -1,0 +1,19 @@
+3—DjangoModel
+*调用原Manager中get_queryset()进行筛选  g_objects = models.Manager()
+*模型是和管理者关联的，关联字段叫model   改写create_grade(self, name, boy_num=23, girl_num=20)
+*比较筛选  年月日筛选  排序  Max()函数
+*filter(Q(g_girl_num__gt=F('g_boy_num') + 30))
+*filter(is_delete=False)
+*   # print(len(grades))            打印班级对象的个数
+    # print(Grade)                  打印这个班级类
+    # print(Grade.objects)          打印班级对象
+    # print(Grade.objects.all())    打印班级对象的全部
+    # print(type(Grade.objects))    打印班级对象的属性
+
+* 加载模板 loader.get_template()   渲染模板 temp.render(context={"username": '匿名'})
+*js注入
+*页面信息展示   注释 乘除法  li标签处理   颜色处理
+ 
+ 
+ 
+4-
