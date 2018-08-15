@@ -1,0 +1,15 @@
+{% extends 'index1.html' %}
+
+{% block extCSS %}
+    <link rel="stylesheet" href="/static/css/index2.css">
+{% endblock %}
+
+{% block header %}
+    {{ block.super }}
+    <h3 style="color:green">今天睡了一上午</h3>
+{% endblock %}
+
+{% block footer_left %}
+{#    <h3>明天要去故宫 门票60</h3>#}
+    <h2>马上教室就没人了</h2>
+{% endblock %}

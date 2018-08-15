@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SendPost</title>
+</head>
+<body>
+{# 获取用户信息 #}
+<form action="{% url 'two:send_request' %}?user=Rock" method="post">
+{#    {% csrf_token %}#}
+    <input type="hidden" name="csrfmiddlewaretoken" value="FfEOhuiEPGTTgRXt1bhEOYq9uO936v4VlHrlAMRikMAn0tGFFo9wUENjqz9mz3Ve">
+    <span>用户名：</span><input type="text" name="username" placeholder="请输入用户名">
+    <br>
+    <span>密码：</span><input type="text" name="password" placeholder="请输入密码">
+    <br>
+    <input type="submit">
+    
+</form>
+</body>
+</html>

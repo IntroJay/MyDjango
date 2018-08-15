@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心</title>
+</head>
+<body>
+    <h2>这里是个人中心</h2>
+    <hr>
+
+    <a href="/app/index/">首页</a>
+    <hr>
+    {#  namespace 命名空间  #}
+    <a href="{% url 'python:intro' %}">首页222</a>
+    <hr>
+
+    {# 点击页面传递日期 #}
+    <a href="/app/getdate/2018/08/14/">今天的日期</a>
+    <hr>
+    {#  反向解析点击页面传递日期  #}
+    <a href="{% url 'python:get_date' 2018 8 14 %}">今天的日期222</a>
+    <hr>
+    {#  url反向解析传递日期2  #}
+    <a href="/app/getdate2/2018/9/10/">下一个月</a>
+    <hr>
+    <a href="{% url 'python:get_date2' year=2018 month=9 day=10 %}">下一个月222</a>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+<h1>班级列表</h1>
+
+<ul>
+    {% for grade in grades %}
+        {#    先找到班级id  反向解析传给views    #}
+        <a href="{% url "two:get_students" gradeid=grade.id %}">
+            <li>{{ grade.s_name }}</li>
+        </a>
+    {% endfor %}
+
+</ul>
