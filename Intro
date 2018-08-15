@@ -23,6 +23,7 @@
 *返回Json数据                       JsonResponse(data)
 *url中namespace的使用
 *在views中url反向解析的使用          result = reverse("python:get_date", args=(2018, 11, 11))
+* 重定向-当前在忙 转给其他人
 
 *班级学生级联
 *404界面重新定义  404.html
