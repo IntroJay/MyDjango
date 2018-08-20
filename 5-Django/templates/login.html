@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+    <h3>用户登录系统</h3>
+    <form action="{% url 'app:do_login' %}" method="post">
+        {% csrf_token %}
+        <span>用户：</span><input type="text" name="username" placeholder="账号">
+        <span>密码：</span><input type="text" name="password" placeholder="密码">
+        <hr>
+        <input type="submit">
+    </form>
+</body>
+</html>

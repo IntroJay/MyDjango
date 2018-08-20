@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+    <h2>欢迎回来{{ username }}</h2>
+
+    <a href="{% url 'app:login' %}">登录</a>
+    <a href="{% url 'app:loginout' %}">退出</a>
+</body>
+</html>

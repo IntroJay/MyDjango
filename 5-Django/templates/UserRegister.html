@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户注册</title>
+</head>
+<body>
+<form action="{% url 'app:user_register' %}" method="POST">
+
+    {% csrf_token %}
+
+    <span>用户名:</span><input type="text" placeholder="账号" name="username">
+    <span>密码:</span><input type="text" placeholder="密码" name="password">
+    <hr>
+    <input type="submit">
+
+</form>
+</body>
+</html>
