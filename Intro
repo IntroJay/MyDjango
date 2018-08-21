@@ -29,3 +29,16 @@
 *404界面重新定义  404.html
 *request请求  path    method      encoding    GET     POST     META
 *获取用户输入的信息  通过csrf_token 和 request.POST
+
+
+5-Django
+*Cookie Session
+*Token
+* MD5哈希算法
+
+
+6-Django
+*用户登录注册
+*中间件
+*文件上传
+*配置缓存
