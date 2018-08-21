@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>意见反馈</title>
+    <script type="text/javascript" src="/static/tiny_mce/tiny_mce.js"></script>
+    <script type="text/javascript">
+        tinyMCE.init({
+            "mode":"textareas",
+            "theme":"advanced",
+            "width":'800',
+            "height":'600',
+        })
+    </script>
+</head>
+<body>
+<form action="{% url 'app:suggest' %}" method="post">
+    <textarea></textarea>
+</form>
+
+</body>
+</html>
