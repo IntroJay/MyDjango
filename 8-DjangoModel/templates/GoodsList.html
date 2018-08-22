@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品列表</title>
+</head>
+<body>
+    <h2>商品列表</h2>
+    <ul>
+        {% for goods in goods_list %}
+            <li>{{ goods.g_name }}</li>
+        {% endfor %}
+
+    </ul>
+</body>
+</html>
